@@ -70,28 +70,50 @@ const renderProductList = () => {
         let newDiv = document.createElement("div");
         newDiv.classList.add("item");
         newDiv.innerHTML = `
-            <img src="../assets/${value.imagen}">
+            <img src="../assets/frutas/${value.imagen}">
             <div class="title">${value.name}</div>
             <div class="price">$${value.price.toFixed(2)}</div>
-            <button onclick="addToCart(${key})">Add to Cart</button>
+            <button id="addToCartBtn${value.id}" onclick="addToCart(${value.id})">Add to Cart</button>
         `;
 
         list.appendChild(newDiv);
     });
 };
-const addToCart = (key) => {
-    if (listCards[key] == null) {
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
-        listCards[key].price = listCards[key].quantity * products[key].price;
-        localStorage.setItem('cart', JSON.stringify(listCards));
-    } else {
-        listCards[key].quantity += 1;
-        listCards[key].price = listCards[key].quantity * products[key].price;
-        localStorage.setItem('cart', JSON.stringify(listCards));
+
+const addToCart = (productId) => {
+    const product = products.find((p) => p.id === productId);
+
+    if (!product) {
+        console.error(`Product with id ${productId} not found.`);
+        return;
     }
+
+    let cartProduct = listCards.find((item) => item.id === productId);
+
+    if (!cartProduct) {
+        cartProduct = { ...product, quantity: 1 };
+        listCards.push(cartProduct);
+    } else {
+        cartProduct.quantity++;
+        cartProduct.price = cartProduct.price * cartProduct.quantity;
+    }
+
+    localStorage.setItem('cart', JSON.stringify(listCards));
     reloadcard();
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const reloadcard = () => {
     listCard.innerHTML = "";
@@ -105,7 +127,7 @@ const reloadcard = () => {
 
             let newDiv = document.createElement("li");
             newDiv.innerHTML = `
-                <div><img src="../assets/${value.imagen}"></div>
+                <div><img src="../assets/frutas/${value.imagen}"></div>
                 <div class="cardTitle">${value.name}</div>
                 <div class="cardPrice">$${value.price.toFixed(2)}</div>
                 <div>
@@ -124,10 +146,11 @@ const reloadcard = () => {
 
 const changeQuantity = (key, quantity) => {
     if (quantity === 0) {
-        delete listCards[key];
+       
+        listCards = listCards.filter((item, index) => index !== key);
     } else {
         listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[key].price = quantity * products[listCards[key].id - 1].price;
         localStorage.setItem('cart', JSON.stringify(listCards));
     }
     reloadcard();

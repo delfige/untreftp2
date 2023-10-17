@@ -463,3 +463,8 @@ ul, ol {
     align-items: center;
     cursor: pointer;
 }
+
+.listCard{
+    max-height: 800px;
+    overflow-y: auto;
+}

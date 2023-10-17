@@ -1,65 +1,154 @@
 [
   {
+    "id": 1,
     "name": "Manzana",
     "descripcion": "Una deliciosa manzana roja.",
-    "imagen": "banana.png",
+    "imagen": "manzana.png",
     "price": 1.0,
     "categoria": "frutas"
   },
   {
+    "id": 2,
     "name": "Plátano",
     "descripcion": "Un plátano maduro y sabroso.",
     "imagen": "banana.png",
     "price": 0.75,
-    "categoria": "verduras"
+    "categoria": "frutas"
   },
   {
+    "id": 3,
     "name": "Naranja",
     "descripcion": "Una jugosa naranja llena de vitamina C.",
-    "imagen": "banana.png",
+    "imagen": "naranja.png",
     "price": 1.25,
     "categoria": "frutas"
   },
   {
+    "id": 4,
     "name": "Lechuga",
     "descripcion": "Lechuga fresca y crujiente.",
-    "imagen": "banana.png",
+    "imagen": "lechuga.png",
     "price": 1.0,
     "categoria": "verduras"
   },
   {
-    "name": "Espinaca1",
+    "id": 5,
+    "name": "ensalada111",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banana.png",
+    "imagen": "tomate.png",
     "price": 0.75,
     "categoria": "ensaladas"
   },
   {
-    "name": "Espinaca1",
+    "id": 6,
+    "name": "Ensalada 2",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banana.png",
-    "price": 0.75,
-    "categoria": "ensaladas"
-  },  
-  {
-    "name": "Espinaca1",
-    "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banana.png",
+    "imagen": "banaana.png",
     "price": 0.75,
     "categoria": "ensaladas"
   },
   {
-    "name": "Espinaca1",
+    "id": 7,
+    "name": "Tomate",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "tomate.png",
+    "price": 0.75,
+    "categoria": "frutas"
+  },
+  {
+    "id": 8,
+    "name": "Ensalada 1",
     "descripcion": "Espinacas verdes y saludables.",
     "imagen": "banana.png",
     "price": 0.75,
     "categoria": "home"
   },
   {
-    "name": "Espinaca1",
+    "id": 9,
+    "name": "Espinaca",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banana.png",
+    "imagen": "espinaca.png",
     "price": 0.75,
     "categoria": "home"
+  },
+  {
+    "id": 10,
+    "name": "Peras",
+    "descripcion": "Peras jugosas y dulces.",
+    "imagen": "peras.png",
+    "price": 1.0,
+    "categoria": "ensaladas"
+  },
+  {
+    "id": 11,
+    "name": "Brócoli",
+    "descripcion": "Brócoli fresco y saludable.",
+    "imagen": "brocoli.png",
+    "price": 0.75,
+    "categoria": "verduras"
+  },
+  {
+    "id": 12,
+    "name": "Uvas",
+    "descripcion": "Uvas rojas y deliciosas.",
+    "imagen": "uvas.png",
+    "price": 1.25,
+    "categoria": "frutas"
+  },
+  {
+    "id": 13,
+    "name": "Espinaca",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "espinaca.png",
+    "price": 0.75,
+    "categoria": "verduras"
+  },
+  {
+    "id": 14,
+    "name": "Papas",
+    "descripcion": "Papas frescas y versátiles.",
+    "imagen": "papas.png",
+    "price": 1.0,
+    "categoria": "verduras"
+  },
+  {
+    "id": 15,
+    "name": "Fresas",
+    "descripcion": "Fresas rojas y deliciosas.",
+    "imagen": "frutillas.png",
+    "price": 1.5,
+    "categoria": "frutas"
+  },
+  {
+    "id": 16,
+    "name": "Apio",
+    "descripcion": "Precio por 1/2k.",
+    "imagen": "apio.png",
+    "price": 0.75,
+    "categoria": "verduras"
+  },
+  {
+    "id": 17,
+    "name": "Sandía",
+    "descripcion": "Sandía jugosa y refrescante.",
+    "imagen": "sandia.png",
+    "price": 2.0,
+    "categoria": "frutas"
+  },
+  {
+    "id": 18,
+    "name": "Zanahoria",
+    "descripcion": "Zanahorias frescas y crujientes.",
+    "imagen": "zanahoria.png",
+    "price": 1.0,
+    "categoria": "verduras"
+  },
+  {
+    "id": 19,
+    "name": "Cebolla",
+    "descripcion": "Cebollas aromáticas y sabrosas.",
+    "imagen": "cebolla.png",
+    "price": 0.75,
+    "categoria": "verduras"
   }
 ]

@@ -143,6 +143,8 @@ ul, ol {
     transition: all 0.25s ease;
     border-radius: 8px;
     cursor: pointer;
+    max-width: 300px;
+
 }
 
 .list .item img {
@@ -251,4 +253,20 @@ ul, ol {
 .listCard li div span{
     color: black;
     margin: 10px;
+}
+
+.listCard{
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carrito img{
+    margin: 25px;
+    height: 35px;
 }
