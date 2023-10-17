@@ -162,7 +162,7 @@ ul, ol {
 
 .list .item button {
     background-color: white;
-    color: #91d316;;
+    color: #91d316;
     font-size: 1rem;
     font-weight: 600;
     width: 100%;
@@ -171,12 +171,17 @@ ul, ol {
     border-radius: 8px;
     cursor: pointer;
 }
+.list .item button:hover{
+    background-color: #91d316;
+    color: white;
+}
 
 .listCard li {
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
     color: #fff;
     row-gap: 10px;
+    margin-top: 30px;
 }
 
 .listCard li div {

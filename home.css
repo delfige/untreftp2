@@ -148,6 +148,7 @@ ul, ol {
     transition: all 0.25s ease;
     border-radius: 8px;
     cursor: pointer;
+    max-width: 300px;
 }
 
 .list .item img {
@@ -418,7 +419,7 @@ ul, ol {
     grid-template-columns: 100px repeat(3, 1fr);
     color: #000000;
     row-gap: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .listCard li div img{
     width: 80px;

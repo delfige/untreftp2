@@ -109,12 +109,6 @@ const addToCart = (productId) => {
 
 
 
-
-
-
-
-
-
 const reloadcard = () => {
     listCard.innerHTML = "";
     let count = 0;

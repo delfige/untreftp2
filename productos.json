@@ -33,9 +33,9 @@
   },
   {
     "id": 5,
-    "name": "ensalada111",
+    "name": "ensalada",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "tomate.png",
+    "imagen": "ensalada3.png",
     "price": 0.75,
     "categoria": "ensaladas"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Ensalada 2",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banaana.png",
+    "imagen": "ensalada2.png",
     "price": 0.75,
     "categoria": "ensaladas"
   },
@@ -59,9 +59,10 @@
     "id": 8,
     "name": "Ensalada 1",
     "descripcion": "Espinacas verdes y saludables.",
-    "imagen": "banana.png",
+    "imagen": "ensalada1.png",
     "price": 0.75,
-    "categoria": "home"
+    "categoria": ["home","ensalada"]
+    
   },
   {
     "id": 9,
@@ -77,7 +78,7 @@
     "descripcion": "Peras jugosas y dulces.",
     "imagen": "peras.png",
     "price": 1.0,
-    "categoria": "ensaladas"
+    "categoria": "frutas"
   },
   {
     "id": 11,
@@ -150,5 +151,13 @@
     "imagen": "cebolla.png",
     "price": 0.75,
     "categoria": "verduras"
+  },
+  {
+    "id": 20,
+    "name": "Ensalada de furtas",
+    "descripcion": "Ensalada fresca con kiwi,frutillas,uvas,arandanos,banana ",
+    "imagen": "ensalada-frutas.png",
+    "price": 0.75,
+    "categoria": "home"
   }
 ]
