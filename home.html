@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Green</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="./assets/logo-palta.png">
+
+    
+</head>
+<body>
+    <header>
+        <div class="div-logo">
+            <img class="logo-nav" src="../assets/logo.png" alt="">
+        </div>
+
+        <ul class="nav">
+            <li class="link link--1"><a class="text" href="../home.html">HOME</a></li>
+            <li><a>PRODUCTOS ▼</a>
+                <ul>
+                    <li onclick="window.location.href = '/components/frutas.html'" class="despleg" data-categoria="frutas"><a href="components/frutas.html">Frutas</a></li>
+                    <li onclick="window.location.href = '/components/verduras.html'" class="despleg" data-categoria="verduras"><a href="components/verduras.html">Verduras</a></li>
+                    <li onclick="window.location.href = '/components/ensaladas.html'" class="despleg" data-categoria="ensaladas"><a href="components/ensaladas.html">Ensaladas</a></li>
+                </ul>
+            </li>
+            <li><a class="text" href="blog.html">BLOG</a></li>
+        </ul>
+        <div class="container">
+            <div class="shopping">
+                <img class="cart" src="../assets/shopping-bag-anadir 1.png" alt="">
+                <span class="quantity">0</span>
+            </div>
+        </div>
+    </header>
+    <div class="card">
+        <div class="funciones">
+            <h1>card</h1>
+            
+
+        </div>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total">$0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+    <section>
+        <div class="hero-image">
+            <div class="white-div" >
+                <p class="p1" >TUS PRODUCTOS</p>
+                <p class="p2"> FRESCOS Y SALUDABLES</p>
+            </div>
+            
+        </div>
+    </section>
+    <section>
+        <div class="favs">
+            <p>Encuentra tus favs</p> <img class="img-heart" src="./assets/heart.png" alt="">
+        </div>
+        <div class="botones-prod">
+            
+                <div class="cont1">
+                    <button id="miboton" class="bt-prod" onclick="window.location.href = '/components/verduras.html'">
+                        <div class="div-prod">
+                            <img class="prod" src="./assets/pimiento-morron.png" alt="">
+                            <a href="/components/verduras.html"></a>
+                        </div>
+                    </button>
+                    <div id="textoEmergente" class="oculto">verduras</div>
+                </div>
+                <div class="cont2">
+
+                    <button  id="miboton1" class="bt-prod" onclick="window.location.href = '/components/frutas.html'">
+                        <div class="div-prod">
+                            <img class="prod" src="./assets/platano.png" alt="platano">
+                        </div>
+                    </button>
+                    <div id="textoEmergente1" class="oculto">Frutas</div>
+                </div>
+                <div>
+                    <button   id="miboton2" class="bt-prod" onclick="window.location.href = '/components/ensaladas.html'">
+                        <div class="div-prod">
+                            <img class="prod" src="./assets/ensalada.png" alt="">
+    
+                        </div>
+                    </button>
+                    <div id="textoEmergente2" class="oculto">Ensaladas</div>
+                </div>
+               
+        </div>
+        <div class="content">
+            <div class="list"></div>
+        </div>
+    </section>
+
+
+   
+
+    <section class="section-blog">
+        <div >
+            <div class="cont-blog">
+                   <img class="img-blog" src="./assets/frutillas.png" alt="frutillas">
+                    <div class="c-column">
+                    <p class="p-blog">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis ipsam natus vero autem! Error veniam vero atque quo quos? Est repellat repellendus, eaque nemo dicta ut facere. Dolor, officia.
+                        Reprehenderit ullam fugiat nemo exercitationem? Fuga iusto, earum blanditiis exercitationem accusamus aperiam reprehenderit, vitae nostrum, odio eveniet ex. Neque fugit illo, incidunt obcaecati ullam ut sapiente qui autem sunt alias!
+    
+                    </p>
+                    
+                    <button class="bt-leer">  LEER MAS></button>
+                    </div>
+            </div>
+            <div class="cont-blog1">
+                <div class="c-column">
+                    <p class="p-blog">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis ipsam natus vero autem! Error veniam vero atque quo quos? Est repellat repellendus, eaque nemo dicta ut facere. Dolor, officia.
+                        Reprehenderit ullam fugiat nemo exercitationem? Fuga iusto, earum blanditiis exercitationem accusamus aperiam reprehenderit, vitae nostrum, odio eveniet ex. Neque fugit illo, incidunt obcaecati ullam ut sapiente qui autem sunt alias!
+                        
+                    </p>
+                    
+                    <button class="bt-leer1">LEER MAS></button>
+                </div>
+                <img class="img-blog" src="./assets/verduras.png" alt="frutillas">
+         </div>
+
+        </div>
+    </section>
+    <script src="./components/frutas.js"></script>
+    <script src="carro.js"></script>
+    
+        
+</body>
+
+    <footer>
+        <div class="div-f">
+            <div>
+                <h1>CONTACTANOS</h1>
+                <p class="p-footer">FACEBOOK</p>
+                <p class="p-footer">TELEFONO</p>
+            </div>
+        </div>
+    </footer>
+</html>
+
+

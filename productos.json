@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Manzana",
+    "descripcion": "Una deliciosa manzana roja.",
+    "imagen": "banana.png",
+    "price": 1.0,
+    "categoria": "frutas"
+  },
+  {
+    "name": "Plátano",
+    "descripcion": "Un plátano maduro y sabroso.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "verduras"
+  },
+  {
+    "name": "Naranja",
+    "descripcion": "Una jugosa naranja llena de vitamina C.",
+    "imagen": "banana.png",
+    "price": 1.25,
+    "categoria": "frutas"
+  },
+  {
+    "name": "Lechuga",
+    "descripcion": "Lechuga fresca y crujiente.",
+    "imagen": "banana.png",
+    "price": 1.0,
+    "categoria": "verduras"
+  },
+  {
+    "name": "Espinaca1",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "ensaladas"
+  },
+  {
+    "name": "Espinaca1",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "ensaladas"
+  },  
+  {
+    "name": "Espinaca1",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "ensaladas"
+  },
+  {
+    "name": "Espinaca1",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "home"
+  },
+  {
+    "name": "Espinaca1",
+    "descripcion": "Espinacas verdes y saludables.",
+    "imagen": "banana.png",
+    "price": 0.75,
+    "categoria": "home"
+  }
+]

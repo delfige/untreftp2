@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0px;
+    background-image: url(assets/image\ 7.png);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 200%;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0; 
+}
+
+.nav {
+    display: flex;
+}
+
+.div-logo {
+    margin-right: 10px; 
+    
+}
+
+.logo-nav {
+    height: auto; 
+    max-height: 90px; 
+    height: 70px;
+}
+
+
+
+.container h1 {
+    color: #560bad;
+}
+
+.container header {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+
+.container header .shopping {
+    position: relative;
+    text-align: right;
+}
+
+.shopping span {
+    background-color: rgb(179, 219, 107);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 35px;
+    right: 3%;
+    padding: 5px;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: white;
+    border-left: 1px solid green;
+    height: 100vh;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    font-size: 30px;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+.active .container {
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+}
+
+.card h1 {
+    color: green;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card .checkOut div {
+    background-color: #b3db6b;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 45px;
+}
+
+.card .checkOut .div:nth-child(2) {
+    background-color: black;
+    color: #fff;
+}
+
+.list .item {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 50px 50px gray;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.list .item img {
+    width: 90%;
+    height: 250px;
+}
+
+.list .item .title {
+    font-weight: 600;
+}
+
+.list .item .price {
+    margin: 10px;
+}
+
+.list .item button {
+    background-color: white;
+    color: #91d316;;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #B3DB6B;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.nav li a {
+	
+	color:black;
+	text-decoration:none;
+	padding:12px 15px;
+	display:block;
+    background-color: white;
+}	
+.nav li a:hover {
+	color: #B3DB6B;
+    border-bottom: 4px #B3DB6B solid;
+    background-color: white;
+}
+			
+.nav li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+.nav li:hover > ul {
+	display:block;
+}
+.nav li ul li {
+	position:relative;
+}
+.nav li ul li ul {
+	right:-140px;
+	top:0px;
+}		
+
+.hero-image{
+    background-image: url(./assets/hero-image.jpeg);
+    height: 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.white-div{
+    background-color: white;
+    opacity: 68%;
+    height: 50%;
+    width: 30%;
+    border-radius: 38% 5% 38% 20%;
+}
+.p1{
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 20%;
+}
+.p2{
+    text-align: center;
+    font-size: 5rem;
+    margin-top: -10%;
+    
+}
+
+.favs{
+    margin-top: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+.img-heart{
+    height: 5rem;
+    margin-left: 2%;
+}
+.botones-prod {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.bt-prod{
+    border-radius: 15%;
+    border: white;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+.div-prod{
+    padding: 10%;
+}
+.prod{
+    height: 60%;
+    width: 60%;
+    padding: 20%;
+}
+.oculto {
+    display: none;
+    font-size: 4rem;
+    text-align: center;
+    
+
+}
+#productos-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    height: 60%;
+}
+.tarjeta-producto{
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.5);
+    padding: 2%;
+}
+.tarjeta-producto img{
+    width: 20rem;
+}
+.tarjeta-producto h3{
+    font-size:4rem;
+    margin: 5% 0;
+}
+.tarjeta-producto p{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.tarjeta-producto button{
+    margin-top: 11%;
+    margin-left: 5%;
+    box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+    background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+    background-color: #b8e356;
+    border-radius: 6px;
+    border: 1px solid #83c41a;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 6px 24px;
+    text-shadow: 0px 1px 0px #86ae47;
+    }
+
+.tarjeta-producto button:hover {
+        background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+        background-color:#a5cc52;
+    }
+    
+.tarjeta-producto button:active {
+        position:relative;
+        top:1px;
+    }
+
+
+
+
+.section-blog{
+    margin: 10%;
+}    
+.img-blog{
+    width: 15%;
+}
+
+.cont-blog{
+    display: flex;
+    background-color: white;
+    border: red solid 6px;
+    margin-bottom: 8%;
+    font-size: 200%;
+}
+
+.cont-blog1{
+    display: flex;
+    background-color: white;
+    border: greenyellow solid 6px;
+    font-size: 200%;
+    
+}
+
+.p-blog{
+    margin-left: 2%;
+}
+
+
+.bt-leer{
+    margin-top: 4%;
+   margin-left: 80%;
+    margin-bottom: 2%;
+    color: white;
+    padding: 1%;
+    font-size: 22px;
+    border-radius: 20%;
+    font-family: Arial;
+    
+    font-size: 30px;
+
+    box-shadow: 0px 1px 3px #666666;
+    text-shadow: 1px 1px 3px #666666;
+    border: solid #d91c71 2px;
+    background-color: #FFBCBC;
+}
+.bt-leer1{
+    margin-top: 6%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    color: white;
+    padding: 1%;
+    font-size: 22px;
+    border-radius: 20%;
+    font-family: Arial;
+    font-size: 30px;
+    box-shadow: 0px 1px 3px #666666;
+    text-shadow: 1px 1px 3px #666666;
+    border: solid green 2px;
+    background-color: #adff2f;
+}
+
+.div-f{
+    height: 40rem;
+    background-color: white;
+    
+}
+
+.p-footer{
+    font-size: 2rem;
+    display: none;
+}
+
+.card h1 {
+    color: green;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #000000;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+.listCard li div img{
+    width: 80px;
+    max-width: 80px;
+}
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+}
+
+.listCard .count {
+    margin: 0px 10px;
+    columns: black;
+}
+
+.cardTitle,
+.cardPrice {
+    color: black;
+}
+
+.cardButton {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
