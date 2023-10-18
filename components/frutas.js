@@ -7,6 +7,8 @@ const body = document.querySelector("body");
 const quantity = document.querySelector(".quantity");
 const categoriaItems = document.querySelectorAll('.despleg');
 
+
+
 openShopping.addEventListener("click", () => {
     body.classList.add("active");
 });
@@ -35,7 +37,8 @@ const initApp = () => {
         "frutas.html": "frutas",
         "verduras.html": "verduras",
         "ensaladas.html": "ensaladas",
-        "home.html": "home"
+        "index.html": "home",
+        "checkout.html": "check"
     };
 
     selectedCategoria = categorias[currentPage] || "frutas"; // Establecemos la categoría basada en la página actual
@@ -72,6 +75,7 @@ const renderProductList = () => {
         newDiv.innerHTML = `
             <img src="../assets/frutas/${value.imagen}">
             <div class="title">${value.name}</div>
+            <div class="descripcion">${value.descripcion}</div>
             <div class="price">$${value.price.toFixed(2)}</div>
             <button id="addToCartBtn${value.id}" onclick="addToCart(${value.id})">Add to Cart</button>
         `;
@@ -151,4 +155,53 @@ const changeQuantity = (key, quantity) => {
 };
 
 renderProductList();
+
+const reloadcarritoEnPagina = () => {
+    const carritoEnPagina = document.getElementById("listado");
+    carritoEnPagina.innerHTML = ""; 
+
+    let total = 0; // Inicializamos el total
+
+    listCards.forEach((value, key) => {
+        if (value != null) {
+            // Suma el precio de cada producto al total
+            total += value.price;
+        }
+    });
+
+    // Agrega el total al principio de la lista
+    let totalDiv = document.createElement("div");
+    totalDiv.innerHTML = `
+        <p class="cardTotal">Total a pagar:</p>
+        <p class="cardTotalPrice">$${total.toFixed(2)}</p>
+    `;
+    carritoEnPagina.appendChild(totalDiv);
+
+    // Ahora, muestra la lista de productos
+    listCards.forEach((value, key) => {
+        if (value != null) {
+            let newDiv = document.createElement("div");
+            newDiv.innerHTML = `
+                <div><img src="../assets/frutas/${value.imagen}"></div>
+                <div class="cardTitle">${value.name}</div>
+                <div class="cardPrice">$${value.price.toFixed(2)}</div>
+            `;
+            carritoEnPagina.appendChild(newDiv);
+        }
+    });
+};
+
+reloadcarritoEnPagina();
+
+
+
+
+
+
+
+
+
+
+
+
 

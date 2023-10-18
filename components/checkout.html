@@ -33,7 +33,50 @@
             </div>
         </div>
     </header>
+    <section class="tabla">
+        <form  class="form">
+            
+            <h2>Información de Contacto</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+    
+            
+            <h2>Dirección de Envío</h2>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+    
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+    
+            <label for="codigo-postal">Código Postal:</label>
+            <input type="text" id="codigo-postal" name="codigo_postal" required>
+    
+           
+            <h2>Información de Pago</h2>
+            <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+            <input type="text" id="tarjeta" name="tarjeta" required>
+    
+            <label for="fecha-expiracion">Fecha de Expiración:</label>
+            <input type="text" id="fecha-expiracion" name="fecha_expiracion" placeholder="MM/AA" required>
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+    
+            
+            <a class="realizar"  href="confirm.html">Realizar Compra</a>
+        </form>
 
+        <section id="listado" class="listado">
+            <div class="totallist">$0</div>
+    
+        </section>
+    </section>
     <div class="content">
         <div class="list"></div>
     </div>
@@ -54,7 +97,6 @@
     <script src="frutas.js"></script>
     
 </body>
-
 <footer>
     <div class="div-f">
         <img class="logo-f"  src="../assets/logo.png" alt="">
@@ -72,5 +114,4 @@
         </div>
     </div>
 </footer>
-
 </html>

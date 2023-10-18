@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Manzana",
-    "descripcion": "Una deliciosa manzana roja.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "manzana.png",
     "price": 1.0,
     "categoria": "frutas"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Plátano",
-    "descripcion": "Un plátano maduro y sabroso.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "banana.png",
     "price": 0.75,
     "categoria": "frutas"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Naranja",
-    "descripcion": "Una jugosa naranja llena de vitamina C.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "naranja.png",
     "price": 1.25,
     "categoria": "frutas"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Lechuga",
-    "descripcion": "Lechuga fresca y crujiente.",
+    "descripcion": "Precio por unidad",
     "imagen": "lechuga.png",
     "price": 1.0,
     "categoria": "verduras"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "ensalada",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Huevo,lechuga,tomate cherry y queso",
     "imagen": "ensalada3.png",
     "price": 0.75,
     "categoria": "ensaladas"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Ensalada 2",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Precio por unidad",
     "imagen": "ensalada2.png",
     "price": 0.75,
     "categoria": "ensaladas"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "Tomate",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "tomate.png",
     "price": 0.75,
     "categoria": "frutas"
@@ -58,24 +58,24 @@
   {
     "id": 8,
     "name": "Ensalada 1",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Tomate cherry,zanahoria y huevo",
     "imagen": "ensalada1.png",
     "price": 0.75,
-    "categoria": ["home","ensalada"]
+    "categoria": "ensaladas"
     
   },
   {
     "id": 9,
     "name": "Espinaca",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Precio por unidad.",
     "imagen": "espinaca.png",
     "price": 0.75,
-    "categoria": "home"
+    "categoria": "verduras"
   },
   {
     "id": 10,
     "name": "Peras",
-    "descripcion": "Peras jugosas y dulces.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "peras.png",
     "price": 1.0,
     "categoria": "frutas"
@@ -83,7 +83,7 @@
   {
     "id": 11,
     "name": "Brócoli",
-    "descripcion": "Brócoli fresco y saludable.",
+    "descripcion": "Precio por unidad",
     "imagen": "brocoli.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -91,7 +91,7 @@
   {
     "id": 12,
     "name": "Uvas",
-    "descripcion": "Uvas rojas y deliciosas.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "uvas.png",
     "price": 1.25,
     "categoria": "frutas"
@@ -99,7 +99,7 @@
   {
     "id": 13,
     "name": "Espinaca",
-    "descripcion": "Espinacas verdes y saludables.",
+    "descripcion": "Precio por unidad",
     "imagen": "espinaca.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -107,15 +107,15 @@
   {
     "id": 14,
     "name": "Papas",
-    "descripcion": "Papas frescas y versátiles.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "papas.png",
     "price": 1.0,
     "categoria": "verduras"
   },
   {
     "id": 15,
-    "name": "Fresas",
-    "descripcion": "Fresas rojas y deliciosas.",
+    "name": "Frutillas",
+    "descripcion": "Precio por 1/4k.",
     "imagen": "frutillas.png",
     "price": 1.5,
     "categoria": "frutas"
@@ -123,7 +123,7 @@
   {
     "id": 16,
     "name": "Apio",
-    "descripcion": "Precio por 1/2k.",
+    "descripcion": "Precio por 100gr.",
     "imagen": "apio.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -131,7 +131,7 @@
   {
     "id": 17,
     "name": "Sandía",
-    "descripcion": "Sandía jugosa y refrescante.",
+    "descripcion": "Precio por unidad.",
     "imagen": "sandia.png",
     "price": 2.0,
     "categoria": "frutas"
@@ -139,7 +139,7 @@
   {
     "id": 18,
     "name": "Zanahoria",
-    "descripcion": "Zanahorias frescas y crujientes.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "zanahoria.png",
     "price": 1.0,
     "categoria": "verduras"
@@ -147,17 +147,33 @@
   {
     "id": 19,
     "name": "Cebolla",
-    "descripcion": "Cebollas aromáticas y sabrosas.",
+    "descripcion": "Precio por 1/2k.",
     "imagen": "cebolla.png",
     "price": 0.75,
     "categoria": "verduras"
   },
   {
     "id": 20,
-    "name": "Ensalada de furtas",
+    "name": "Ensalada de frutas",
     "descripcion": "Ensalada fresca con kiwi,frutillas,uvas,arandanos,banana ",
     "imagen": "ensalada-frutas.png",
     "price": 0.75,
-    "categoria": "home"
+    "categoria": "ensaladas"
+  },
+  {
+    "id": 21,
+    "name": "Acelga",
+    "descripcion": "Precio por unidad.",
+    "imagen": "acelga.png",
+    "price": 0.75,
+    "categoria": "verduras"
+  },
+  {
+    "id": 22,
+    "name": "Arándano",
+    "descripcion": "Precio por 100gr.",
+    "imagen": "arandano.png",
+    "price": 0.75,
+    "categoria": "frutas"
   }
 ]

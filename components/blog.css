@@ -15,7 +15,7 @@ ul, ol {
 	list-style:none;
 }	
 .div-1{
-    background-image: url(./assets/image\ 7.png);
+    background-image: url(../assets/image\ 7.png);
 }
 .nav{
     display: flex;
@@ -86,3 +86,28 @@ ul, ol {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.logo-f{
+    margin-top: 3%;
+    height: 100px;
+    font-size: 50px;
+}
+footer img{
+    height: 60px;
+}
+.div-f{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    align-content: flex-start;
+    justify-content: space-around;
+    height: 22rem;
+    background-color: white;
+}
+.div-f2{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+

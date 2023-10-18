@@ -121,7 +121,10 @@ ul, ol {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.card .checkOut div {
+.card .checkOut div,
+.pagar
+ {
+    text-decoration: none;
     background-color: #b3db6b;
     color: rgb(255, 255, 255);
     width: 100%;
@@ -367,7 +370,7 @@ ul, ol {
     color: white;
     padding: 1%;
     font-size: 22px;
-    border-radius: 20%;
+    border-radius: 10%;
     font-family: Arial;
     
     font-size: 30px;
@@ -384,7 +387,7 @@ ul, ol {
     color: white;
     padding: 1%;
     font-size: 22px;
-    border-radius: 20%;
+    border-radius: 10%;
     font-family: Arial;
     font-size: 30px;
     box-shadow: 0px 1px 3px #666666;
@@ -393,11 +396,7 @@ ul, ol {
     background-color: #adff2f;
 }
 
-.div-f{
-    height: 40rem;
-    background-color: white;
-    
-}
+
 
 .p-footer{
     font-size: 2rem;
@@ -468,4 +467,135 @@ ul, ol {
 .listCard{
     max-height: 800px;
     overflow-y: auto;
+}
+.carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carrito img{
+    margin: 25px;
+    height: 35px;
+}
+
+.logo-f{
+    margin-top: 3%;
+    height: 100px;
+    font-size: 50px;
+}
+footer img{
+    height: 60px;
+}
+.div-f{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    align-content: flex-start;
+    justify-content: space-around;
+    height: 22rem;
+    background-color: white;
+}
+.div-f2{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+
+
+@media (max-width: 1024px) {
+    .hero-image {
+        
+        height:55rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 2%;
+        display: flex;
+        
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+    .white-div{
+        height: 35%;
+        width: 30%;
+        margin-left: 5%;
+    }
+    .p1,.p2{
+        font-size: 3rem;
+    }
+    .cont-blog,.cont-blog1{
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 800px) {
+    .white-div{
+        display: none;
+    }
+    .botones-prod{
+        gap: 50px;
+    }
+    .listCard{
+        max-height: 1000px;
+    }
+    .cont-blog,.cont-blog1{
+        font-size: 100%;
+    }
+    .img-blog {
+        width: 30%;
+    }
+    .bt-leer{
+        font-size: 17px;
+        margin-right: 5px;
+    }
+    .logo-f{
+        height: 80px;
+
+    }
+    .shopping span{
+        font-size: 27px;
+        padding: 1px;
+    }
+}
+@media (max-width: 600px){
+    .list .item{
+        max-width: 250px;
+        padding: 10px;
+    }
+    .nav{
+        font-size: 50%;
+    }
+    .logo-nav{
+        height: 30px;
+    }
+    .cart{
+        height: 35px;
+    }.list .item img {
+        width: 81%;
+        height: 100px;
+    }
+    .card{
+        width: 350px;
+    }
+    .active .card{
+        left: calc(100% - 350px);
+    }
+    .div-f {
+        display: flex;
+        flex-direction: column;
+        padding-top: 3%;
+        justify-content: space-around;
+        height: 40rem;
+        background-color: white;
+        align-items: flex-end;
+        align-content: center;
+    }
+    .logo-f{
+        height: 60px;
+    }
 }
