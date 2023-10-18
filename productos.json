@@ -1,8 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Manzana",
+    "name": "Manzana roja",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Es el fruto del manzano, árbol de la familia de las rosáceas. La piel puede ser de color verde, amarilla o rojiza, y la pulpa, harinosa o crujiente, presenta un sabor que varía entre el agrio y el dulce.",
     "imagen": "manzana.png",
     "price": 1.0,
     "categoria": "frutas"
@@ -11,6 +12,7 @@
     "id": 2,
     "name": "Plátano",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "El plátano es una fruta tropical procedente de la planta herbácea que recibe el mismo nombre o banano, perteneciente a la familia de las musáceas.",
     "imagen": "banana.png",
     "price": 0.75,
     "categoria": "frutas"
@@ -19,6 +21,7 @@
     "id": 3,
     "name": "Naranja",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "La naranja es una fruta cítrica de color anaranjado, conocida por su sabor refrescante y sus altos niveles de vitamina C.",
     "imagen": "naranja.png",
     "price": 1.25,
     "categoria": "frutas"
@@ -27,6 +30,7 @@
     "id": 4,
     "name": "Lechuga",
     "descripcion": "Precio por unidad",
+    "descripcion2": "La lechuga es una hortaliza de hojas verdes y frescas, ampliamente utilizada en ensaladas y otros platos.",
     "imagen": "lechuga.png",
     "price": 1.0,
     "categoria": "verduras"
@@ -34,7 +38,8 @@
   {
     "id": 5,
     "name": "ensalada",
-    "descripcion": "Huevo,lechuga,tomate cherry y queso",
+    "descripcion": "Huevo, lechuga, tomate cherry y queso",
+    "descripcion2": "Una ensalada fresca y deliciosa que combina ingredientes saludables y sabrosos.",
     "imagen": "ensalada3.png",
     "price": 0.75,
     "categoria": "ensaladas"
@@ -43,6 +48,7 @@
     "id": 6,
     "name": "Ensalada 2",
     "descripcion": "Precio por unidad",
+    "descripcion2": "Una ensalada sabrosa llena de ingredientes frescos y saludables.",
     "imagen": "ensalada2.png",
     "price": 0.75,
     "categoria": "ensaladas"
@@ -51,6 +57,7 @@
     "id": 7,
     "name": "Tomate",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "El tomate es una hortaliza versátil que se utiliza en una variedad de platos, desde ensaladas hasta salsas.",
     "imagen": "tomate.png",
     "price": 0.75,
     "categoria": "frutas"
@@ -58,16 +65,17 @@
   {
     "id": 8,
     "name": "Ensalada 1",
-    "descripcion": "Tomate cherry,zanahoria y huevo",
+    "descripcion": "Tomate cherry, zanahoria y huevo",
+    "descripcion2": "Una deliciosa ensalada con ingredientes frescos y una combinación de sabores única.",
     "imagen": "ensalada1.png",
     "price": 0.75,
     "categoria": "ensaladas"
-    
   },
   {
     "id": 9,
     "name": "Espinaca",
-    "descripcion": "Precio por unidad.",
+    "descripcion": "Precio por unidad",
+    "descripcion2": "La espinaca es una hoja verde rica en nutrientes que se utiliza en muchas preparaciones culinarias.",
     "imagen": "espinaca.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -76,6 +84,7 @@
     "id": 10,
     "name": "Peras",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Las peras son frutas jugosas con una textura suave y dulce sabor.",
     "imagen": "peras.png",
     "price": 1.0,
     "categoria": "frutas"
@@ -84,6 +93,7 @@
     "id": 11,
     "name": "Brócoli",
     "descripcion": "Precio por unidad",
+    "descripcion2": "El brócoli es una verdura rica en nutrientes con floretes verdes comestibles.",
     "imagen": "brocoli.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -92,6 +102,7 @@
     "id": 12,
     "name": "Uvas",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Las uvas son pequeñas frutas dulces que se pueden disfrutar solas o en ensaladas y postres.",
     "imagen": "uvas.png",
     "price": 1.25,
     "categoria": "frutas"
@@ -100,6 +111,7 @@
     "id": 13,
     "name": "Espinaca",
     "descripcion": "Precio por unidad",
+    "descripcion2": "La espinaca es una hoja verde rica en nutrientes que se utiliza en muchas preparaciones culinarias.",
     "imagen": "espinaca.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -108,6 +120,7 @@
     "id": 14,
     "name": "Papas",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Las papas son un alimento básico en muchas cocinas y se pueden preparar de diversas formas.",
     "imagen": "papas.png",
     "price": 1.0,
     "categoria": "verduras"
@@ -116,6 +129,7 @@
     "id": 15,
     "name": "Frutillas",
     "descripcion": "Precio por 1/4k.",
+    "descripcion2": "Las frutillas son frutas rojas y jugosas que se utilizan en postres y batidos.",
     "imagen": "frutillas.png",
     "price": 1.5,
     "categoria": "frutas"
@@ -124,6 +138,7 @@
     "id": 16,
     "name": "Apio",
     "descripcion": "Precio por 100gr.",
+    "descripcion2": "El apio es una verdura crujiente que se utiliza en ensaladas y como aperitivo.",
     "imagen": "apio.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -132,6 +147,7 @@
     "id": 17,
     "name": "Sandía",
     "descripcion": "Precio por unidad.",
+    "descripcion2": "La sandía es una refrescante fruta de verano con pulpa roja y jugosa.",
     "imagen": "sandia.png",
     "price": 2.0,
     "categoria": "frutas"
@@ -140,6 +156,7 @@
     "id": 18,
     "name": "Zanahoria",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Las zanahorias son raíces comestibles de color naranja que son versátiles en la cocina.",
     "imagen": "zanahoria.png",
     "price": 1.0,
     "categoria": "verduras"
@@ -148,6 +165,7 @@
     "id": 19,
     "name": "Cebolla",
     "descripcion": "Precio por 1/2k.",
+    "descripcion2": "Las cebollas son hortalizas versátiles que se utilizan en muchas recetas.",
     "imagen": "cebolla.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -155,7 +173,8 @@
   {
     "id": 20,
     "name": "Ensalada de frutas",
-    "descripcion": "Ensalada fresca con kiwi,frutillas,uvas,arandanos,banana ",
+    "descripcion": "Ensalada fresca con kiwi, frutillas, uvas, arándanos, banana.",
+    "descripcion2": "Una deliciosa ensalada de frutas que combina una variedad de sabores y colores.",
     "imagen": "ensalada-frutas.png",
     "price": 0.75,
     "categoria": "ensaladas"
@@ -164,6 +183,7 @@
     "id": 21,
     "name": "Acelga",
     "descripcion": "Precio por unidad.",
+    "descripcion2": "La acelga es una verdura de hojas verdes que se utiliza en platos salados y como guarnición.",
     "imagen": "acelga.png",
     "price": 0.75,
     "categoria": "verduras"
@@ -172,6 +192,7 @@
     "id": 22,
     "name": "Arándano",
     "descripcion": "Precio por 100gr.",
+    "descripcion2": "Los arándanos son pequeñas frutas moradas con un sabor dulce y ligeramente ácido.",
     "imagen": "arandano.png",
     "price": 0.75,
     "categoria": "frutas"

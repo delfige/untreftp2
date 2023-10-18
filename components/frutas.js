@@ -29,8 +29,8 @@ const initApp = () => {
     }
 
     const path = window.location.pathname; // Obtenemos la ruta de la URL
-    const pathSegments = path.split("/"); // Dividimos la ruta en segmentos
-    const currentPage = pathSegments[pathSegments.length - 1]; // Obtenemos la última parte de la ruta (nombre del archivo actual)
+    const pathSegments = path.split("/"); 
+    const currentPage = pathSegments[pathSegments.length - 1]; 
     
     // Mapeamos el nombre del archivo actual a la categoría correspondiente
     const categorias = {
@@ -39,6 +39,7 @@ const initApp = () => {
         "ensaladas.html": "ensaladas",
         "index.html": "home",
         "checkout.html": "check"
+        
     };
 
     selectedCategoria = categorias[currentPage] || "frutas"; // Establecemos la categoría basada en la página actual
@@ -58,7 +59,7 @@ initApp();
 
 categoriaItems.forEach((item) => {
     item.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        event.preventDefault(); 
         selectedCategoria = event.currentTarget.getAttribute('data-categoria');
         renderProductList();
     });
@@ -78,6 +79,7 @@ const renderProductList = () => {
             <div class="descripcion">${value.descripcion}</div>
             <div class="price">$${value.price.toFixed(2)}</div>
             <button id="addToCartBtn${value.id}" onclick="addToCart(${value.id})">Add to Cart</button>
+            <a href="detalle.html?id=${value.id}" class="details-link" data-product-id="${value.id}">Ver detalles</a>
         `;
 
         list.appendChild(newDiv);
@@ -160,7 +162,7 @@ const reloadcarritoEnPagina = () => {
     const carritoEnPagina = document.getElementById("listado");
     carritoEnPagina.innerHTML = ""; 
 
-    let total = 0; // Inicializamos el total
+    let total = 0; 
 
     listCards.forEach((value, key) => {
         if (value != null) {
@@ -169,7 +171,7 @@ const reloadcarritoEnPagina = () => {
         }
     });
 
-    // Agrega el total al principio de la lista
+    
     let totalDiv = document.createElement("div");
     totalDiv.innerHTML = `
         <p class="cardTotal">Total a pagar:</p>
@@ -177,7 +179,7 @@ const reloadcarritoEnPagina = () => {
     `;
     carritoEnPagina.appendChild(totalDiv);
 
-    // Ahora, muestra la lista de productos
+    // muestra la lista de productos
     listCards.forEach((value, key) => {
         if (value != null) {
             let newDiv = document.createElement("div");
@@ -193,6 +195,26 @@ const reloadcarritoEnPagina = () => {
 
 reloadcarritoEnPagina();
 
+document.addEventListener("DOMContentLoaded", function () {
+    // ... (Tu código existente)
+
+    var addToCartButton = document.getElementById("add-to-cart-button");
+    addToCartButton.addEventListener("click", function() {
+        // Obtener el ID del producto de la URL
+        var productId = getParameterByName("id");
+
+        // Encontrar el producto en el arreglo 'products' por ID
+        var product = products.find(item => item.id === parseInt(productId));
+
+        if (product) {
+            // Agregar el producto al carrito
+            addToCart(product.id);
+            // Mostrar una confirmación o mensaje al usuario si lo deseas
+            alert('El producto ha sido agregado al carrito.');
+        } else {
+            alert('Producto no encontrado.');
+        }
+    });
 
 
 
@@ -201,7 +223,4 @@ reloadcarritoEnPagina();
 
 
 
-
-
-
-
+})

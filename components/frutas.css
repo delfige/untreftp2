@@ -463,3 +463,32 @@ footer img{
         height: 60px;
     }
 }
+
+#product-details{
+    display: flex;
+    margin: 3% 3%;
+    background-color: #ffffffc7;
+}
+#product-image{
+    width: 50%;
+    max-width: 50%;
+}
+#product-details div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    padding: 5%;
+}
+
+#go-back-button{
+    height: 50%;
+    border: none;
+    background: none;
+    margin: 1%;
+}
+#go-back-button img{
+    height: 70px;
+    max-width: 70px;
+}
