@@ -31,4 +31,8 @@ boton2.addEventListener("mouseout", () => {
     textoEmergente2.style.display = "none";
 });
 
-  
+  // agregar boton eliminar producto , y borrar todos .
+  // agregar ver detalle 
+  //que se muestre solo del carrito 
+  //  mover los onclick 
+  //numero por producto 

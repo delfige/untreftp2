@@ -112,7 +112,7 @@
     "name": "Espinaca",
     "descripcion": "Precio por unidad",
     "descripcion2": "La espinaca es una hoja verde rica en nutrientes que se utiliza en muchas preparaciones culinarias.",
-    "imagen": "espinaca.png",
+    "imagen": "assets/espinaca.png",
     "price": 0.75,
     "categoria": "verduras"
   },

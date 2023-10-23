@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Green</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="shortcut icon" href="./assets/logo-palta.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="shortcut icon" href="../assets/logo-palta.png">
 
     
 </head>
@@ -16,19 +16,19 @@
         </div>
 
         <ul class="nav">
-            <li ><a class="text" href="../index.html">HOME</a></li>
+            <li ><a class="text" href="index.html">HOME</a></li>
             <li><a>PRODUCTOS ▼</a>
                 <ul>
-                    <li onclick="window.location.href = '/components/frutas.html'" class="despleg" data-categoria="frutas"><a href="frutas.html">Frutas</a></li>
-                    <li onclick="window.location.href = '/components/verduras.html'" class="despleg" data-categoria="verduras"><a href="verduras.html">Verduras</a></li>
-                    <li onclick="window.location.href = '/components/ensaladas.html'" class="despleg" data-categoria="ensaladas"><a href="components/ensaladas.html">Ensaladas</a></li>
+                    <li onclick="window.location.href = 'frutas.html'" class="despleg" data-categoria="frutas"><a href="../html/frutas.html">Frutas</a></li>
+                    <li onclick="window.location.href = 'verduras.html'" class="despleg" data-categoria="verduras"><a href="../html/verduras.html">Verduras</a></li>
+                    <li onclick="window.location.href = 'ensaladas.html'" class="despleg" data-categoria="ensaladas"><a href="../html/ensaladas.html">Ensaladas</a></li>
                 </ul>
             </li>
-            <li><a class="text" href="./components/blog.html">BLOG</a></li>
+            <li><a class="text" href="blog.html">BLOG</a></li>
         </ul>
         <div class="container">
             <div class="shopping">
-                <img class="cart" src="assets/shopping-bag-anadir 1.png" alt="">
+                <a href="checkout.html"> <img class="cart" src="../assets/shopping-bag-anadir 1.png" alt=""></a>
                 <span class="quantity">0</span>
             </div>
         </div>
@@ -36,20 +36,7 @@
     <div class="content">
         <div class="list"></div>
     </div>
-    <div class="card">
-        <div class="carrito">
-            <h1>Tu carrito</h1>
-            <img src="" alt="">
-            <img class="closeShopping" src="assets/x.png" alt="">
-            
 
-        </div>
-        <ul class="listCard"></ul>
-        <div class="checkOut">
-            <div class="total">$0</div>
-            <a class="pagar" href="./components/checkout.html">PAGAR</a>
-        </div>
-    </div>
     <section>
         <div class="hero-image">
             <div class="white-div" >
@@ -61,15 +48,15 @@
     </section>
     <section>
         <div class="favs">
-            <p>Encuentra tus favs</p> <img class="img-heart" src="./assets/heart.png" alt="">
+            <p>Encuentra tus favs</p> <img class="img-heart" src="../assets/heart.png" alt="">
         </div>
         <div class="botones-prod">
             
                 <div class="cont1">
                     <button id="miboton" class="bt-prod" onclick="window.location.href = '/components/verduras.html'">
                         <div class="div-prod">
-                            <img class="prod" src="./assets/pimiento-morron.png" alt="">
-                            <a href="/components/verduras.html"></a>
+                            <img class="prod" src="../assets/pimiento-morron.png" alt="">
+                            <a href="verduras.html"></a>
                         </div>
                     </button>
                     <div id="textoEmergente" class="oculto">verduras</div>
@@ -78,7 +65,7 @@
 
                     <button  id="miboton1" class="bt-prod" onclick="window.location.href = '/components/frutas.html'">
                         <div class="div-prod">
-                            <img class="prod" src="./assets/platano.png" alt="platano">
+                            <img class="prod" src="../assets/platano.png" alt="platano">
                         </div>
                     </button>
                     <div id="textoEmergente1" class="oculto">Frutas</div>
@@ -86,7 +73,7 @@
                 <div>
                     <button   id="miboton2" class="bt-prod" onclick="window.location.href = '/components/ensaladas.html'">
                         <div class="div-prod">
-                            <img class="prod" src="./assets/ensalada.png" alt="">
+                            <img class="prod" src="../assets/ensalada.png" alt="">
     
                         </div>
                     </button>
@@ -105,7 +92,7 @@
     <section class="section-blog">
         <div >
             <div class="cont-blog">
-                   <img class="img-blog" src="./assets/frutillas.png" alt="frutillas">
+                   <img class="img-blog" src="../assets/frutillas.png" alt="frutillas">
                     <div class="c-column">
                     <p class="p-blog">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis ipsam natus vero autem! Error veniam vero atque quo quos? Est repellat repellendus, eaque nemo dicta ut facere. Dolor, officia.
@@ -113,7 +100,7 @@
     
                     </p>
                     
-                    <button onclick="window.location.href = '/components/blog.html'" class="bt-leer">  LEER MAS></button>
+                    <button onclick="window.location.href = 'blog.html'" class="bt-leer">  LEER MAS></button>
                     </div>
             </div>
             <div class="cont-blog1">
@@ -126,34 +113,34 @@
                     
                     <button onclick="window.location.href = '/components/blog.html'"  class="bt-leer1">LEER MAS></button>
                 </div>
-                <img class="img-blog" src="./assets/verduras.png" alt="frutillas">
+                <img class="img-blog" src="../assets/verduras.png" alt="frutillas">
          </div>
 
         </div>
     </section>
-    <script src="./components/frutas.js"></script>
-    <script src="carro.js"></script>
+    <script src="../js/frutas.js"></script>
+    <script src="../js/carro.js"></script>
     
         
-</body>
-
     <footer>
         <div class="div-f">
-            <img class="logo-f"  src="./assets/logo.png" alt="">
+            <img class="logo-f"  src="../assets/logo.png" alt="">
             <div class="div-f2">
                 <h2>Contactános:</h2>
-                <img src="./assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
-                <img src="./assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
-                <p><img src="./assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
-
+                <img src="../assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
+                <img src="../assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
+                <p><img src="../assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
+    
             </div>
             <div>
                 <h2>Encontrános en:</h2>
-                <img src="./assets/fter/instagram (2).png" alt="">
-                <img src="./assets/fter/facebook.png" alt="">
+                <img src="../assets/fter/instagram (2).png" alt="">
+                <img src="../assets/fter/facebook.png" alt="">
             </div>
         </div>
     </footer>
+</body>
+
 </html>
 
 

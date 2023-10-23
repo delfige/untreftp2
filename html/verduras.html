@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Green</title>
+    <link rel="shortcut icon" href="../assets/logo-palta.png">
+    <link rel="stylesheet" href="../css/frutas.css">    
+</head>
+<body>
+    <header>
+        <div class="div-logo">
+            <img class="logo-nav" src="../assets/logo.png" alt="">
+        </div>
+
+        <ul class="nav">
+            <li class="link link--1"><a class="text" href="index.html">HOME</a></li>
+            <li><a>PRODUCTOS ▼</a>
+                <ul>
+                    <li onclick="window.location.href = 'frutas.html'"  class="despleg" data-categoria="frutas"><a href="frutas.html">Frutas</a></li>
+                    <li onclick="window.location.href = 'verduras.html'"  class="despleg" data-categoria="verduras"><a href="verduras.html">Verduras</a></li>
+                    <li onclick="window.location.href = 'ensaladas.html'"  class="despleg" data-categoria="ensaladas"><a href="ensaladas.html">Ensaladas</a></li>
+                </ul>
+            </li>
+            <li><a class="text" href="blog.html">BLOG</a></li>
+        </ul>
+        <div class="container">
+            <div class="shopping">
+                <img class="cart" src="../assets/shopping-bag-anadir 1.png" alt="">
+                <span class="quantity">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="list"></div>
+    </div>
+    <div class="card">
+        <div class="carrito">
+            <h1>Tu carrito</h1>
+            <img class="closeShopping" src="../assets/x.png" alt="">
+            
+
+        </div>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total">$0</div>
+            <a class="pagar" href="checkout.html">PAGAR</a>
+        </div>
+    </div>
+    <script src="../js/frutas.js"></script>
+    
+</body>
