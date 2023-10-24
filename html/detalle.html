@@ -7,7 +7,7 @@
     <title>Love Green</title>
     <link rel="shortcut icon" href="../assets/logo-palta.png">
     <link rel="stylesheet" href="../css/frutas.css">
-    
+
 </head>
 <body>
     <header>
@@ -16,19 +16,19 @@
         </div>
 
         <ul class="nav">
-            <li class="link link--1"><a class="text" href="../index.html">HOME</a></li>
+            <li class="link link--1"><a class="text" href="index.html">HOME</a></li>
             <li><a>PRODUCTOS ▼</a>
                 <ul>
-                    <li onclick="window.location.href = 'frutas.html'"  class="despleg" data-categoria="frutas"><a href="frutas.html">Frutas</a></li>
-                    <li onclick="window.location.href = 'verduras.html'"  class="despleg" data-categoria="verduras"><a href="verduras.html">Verduras</a></li>
-                    <li onclick="window.location.href = 'ensaladas.html'"  class="despleg" data-categoria="ensaladas"><a href="ensaladas.html">Ensaladas</a></li>
+                    <li  class="despleg" data-categoria="frutas"><a href="frutas.html">Frutas</a></li>
+                    <li   class="despleg" data-categoria="verduras"><a href="verduras.html">Verduras</a></li>
+                    <li  class="despleg" data-categoria="ensaladas"><a href="ensaladas.html">Ensaladas</a></li>
                 </ul>
             </li>
             <li><a class="text" href="blog.html">BLOG</a></li>
         </ul>
         <div class="container">
             <div class="shopping">
-                <img class="cart" src="../assets/shopping-bag-anadir 1.png" alt="">
+                <a href="checkout.html"> <img class="cart" src="../assets/shopping-bag-anadir 1.png" alt=""></a>
                 <span class="quantity">0</span>
             </div>
         </div>
@@ -36,37 +36,106 @@
     <div style="display: none;" class="content">
         <div class="list"></div>
     </div>
+    <div class="card">
+        <div class="carrito">
+            <h1>Tu carrito</h1>
+            <img class="closeShopping" src="../assets/x.png" alt="">
 
 
+        </div>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total">$0</div>
+            <a class="pagar" href="checkout.html">PAGAR</a>
+        </div>
+    </div>
+    <script src="frutas.js"></script>
     <button id="go-back-button"><img src="../assets/atras.png" alt=""></button>
-    <div id="product-details-container">
-        <!-- Aquí se mostrarán los detalles del producto -->
-  
+
+    <div id="product-details">
+
+
+            <img id="product-image" src="" alt="Product Image">
+        <div>
+
+            <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+            <p id="product-desc"></p>
+            <button id="add-to-cart-button">Agregar al carrito</button>
+
+        </div>
+
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
 
-    <section style="display: none;" id="listado" class="listado">
-        <div class="totallist">$0</div>
+            // Obtener el ID del producto de la URL
+            var productId = getParameterByName("id");
 
-    </section>
-    <footer>
-        <div class="div-f">
-            <img class="logo-f"  src="../assets/logo.png" alt="">
-            <div class="div-f2">
-                <h2>Contactános:</h2>
-                <img src="../assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
-                <img src="../assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
-                <p><img src="../assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
-    
-            </div>
-            <div>
-                <h2>Encontrános en:</h2>
-                <img src="../assets/fter/instagram (2).png" alt="">
-                <img src="../assets/fter/facebook.png" alt="">
-            </div>
-        </div>
-    </footer>
- <script src="../js/frutas.js"></script>
- 
+            // Cargar productos desde productos.json
+            fetch('../productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Buscar el producto por ID
+                    var product = data.find(item => item.id === parseInt(productId));
+
+                    if (product) {
+                        document.getElementById("product-image").src = "../assets/frutas/" + product.imagen;
+                        document.getElementById("product-name").textContent = product.name;
+                        document.getElementById("product-price").textContent = "PRECIO $" + product.price.toFixed(2);
+                        document.getElementById("product-desc").textContent = product.descripcion2;
+
+                        // Obtén el botón "Agregar al carrito" por su ID
+                        var addToCartButton = document.getElementById("add-to-cart-button");
+
+                        // Escucha el evento de clic en el botón
+                        addToCartButton.addEventListener("click", function () {
+                            // Llama a la función addToCart pasando el ID del producto
+                            addToCart(product.id);
+                        });
+                    } else {
+                        document.getElementById("product-details").innerHTML = "Producto no encontrado.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar los productos: ', error);
+                    document.getElementById("product-details").innerHTML = "Error al cargar los productos.";
+                });
+
+            var goBackButton = document.getElementById("go-back-button");
+            goBackButton.addEventListener("click", function () {
+                window.history.back();
+            });
+        });
+    </script>
+    Z
+    <script src="../js/frutas.js"></script>
 </body>
+<footer>
+    <div class="div-f">
+        <img class="logo-f"  src="../assets/logo.png" alt="">
+        <div class="div-f2">
+            <h2>Contactános:</h2>
+            <img src="../assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
+            <img src="../assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
+            <p><img src="../assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
+
+        </div>
+        <div>
+            <h2>Encontrános en:</h2>
+            <img src="../assets/fter/instagram (2).png" alt="">
+            <img src="../assets/fter/facebook.png" alt="">
+        </div>
+    </div>
+</footer>
+
 </html>

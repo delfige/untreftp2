@@ -14,15 +14,18 @@ const updateCartQuantity = () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const listado = document.getElementById("listado");
+    const addToCartButton = document.getElementById("add-to-cart-button");
 
     // Recupera los productos del almacenamiento local
     const savedCart = localStorage.getItem('cart');
     listCards = savedCart ? JSON.parse(savedCart) : [];
-        // Recupera la cantidad del carrito desde LocalStorage y muestra en todas las páginas
+    
+    // Recupera la cantidad del carrito desde LocalStorage y muestra en todas las páginas
     const savedCartQuantity = localStorage.getItem('cartQuantity');
     if (savedCartQuantity) {
         quantity.innerText = savedCartQuantity;
     }
+
     // Mostrar los productos en la página
     listado.innerHTML = "";
     let total = 0;
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const totalDiv = document.createElement("div");
     totalDiv.innerHTML = `
-        <p class="cardTotal">Total a pagar:</p>
+        <p class "cardTotal">Total a pagar:</p>
         <p class="cardTotalPrice">$${total.toFixed(2)}</p>
     `;
     listado.appendChild(totalDiv);
@@ -64,9 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Actualizar la cantidad de productos en el carrito
     updateCartQuantity();
 
+    // Obtén el ID del producto de la URL
+    const productId = getParameterByName("id");
 
+    // Obtén el botón "Agregar al carrito" por su ID
     
 
+    // Escucha el evento de clic en el botón
+    addToCartButton.addEventListener("click", function () {
+        // Llama a la función addToCart pasando el ID del producto
+        addToCart(productId);
+    });
 });
 
 const initApp = () => {
@@ -124,45 +135,13 @@ const renderProductList = () => {
             <div class="descripcion">${value.descripcion}</div>
             <div class="price">$${value.price.toFixed(2)}</div>
             <button onclick="addToCart(${value.id})">Add to Cart</button>
-            <a href="#" class="details-link" data-product-id="${value.id}" onclick="showProductDetails(event, ${value.id});">Ver detalles</a>
+            <a href="detalle.html?id=${value.id}" class="details-link" data-product-id="${value.id}">Ver detalles</a>
         `;
 
         list.appendChild(newDiv);
     });
 };
-const showProductDetails = (event, productId) => {
-    event.preventDefault(); // Evita que el enlace redireccione
 
-    console.log("showProductDetails se está ejecutando con el ID:", productId);
-
-    // Encuentra el producto seleccionado en el array de productos
-    const selectedProduct = products.find(product => product.id === productId);
-
-    // Verifica si el producto se encontró
-    if (selectedProduct) {
-        // Crea un elemento div para mostrar los detalles del producto
-        const detailsDiv = document.createElement("div");
-        detailsDiv.classList.add("product-details");
-
-        // Agrega contenido al div de detalles del producto
-        detailsDiv.innerHTML = `
-            <img src="../assets/frutas/${selectedProduct.imagen}" alt="Producto">
-            <h1 class="product-title">${selectedProduct.name}</h1>
-            <p class="product-description">${selectedProduct.descripcion}</p>
-            <p class="product-price">$${selectedProduct.price.toFixed(2)}</p>
-            <button onclick="addToCart(${selectedProduct.id})">Agregar al Carrito</button>
-        `;
-
-        // Obtén el elemento donde deseas mostrar los detalles (por ejemplo, 'product-details-container')
-        const detailsContainer = document.getElementById("product-details-container");
-
-        // Limpia el contenido actual en el div de detalles y agrega los nuevos detalles
-        detailsContainer.innerHTML = "";
-        detailsContainer.appendChild(detailsDiv);
-    } else {
-        console.error("Producto no encontrado");
-    }
-};
 
 
 
@@ -237,3 +216,15 @@ const removeAllProducts = () => {
 const updateCart = () => {
     location.reload(); 
 };
+
+
+// Agrega el atributo onclick a cada elemento li
+categoriaItems.forEach(item => {
+    // Obtiene la categoría del elemento data
+    const categoria = item.getAttribute('data-categoria');
+
+    // Agrega el atributo onclick que redirige a la página correspondiente
+    item.onclick = function() {
+        window.location.href = `${categoria}.html`;
+    };
+});
