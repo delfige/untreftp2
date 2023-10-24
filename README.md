@@ -21,4 +21,4 @@ Love Green es una aplicación web que te permite explorar y comprar una amplia v
 3. Para agregar un producto al carrito, haz clic en el botón "Agregar al carrito".
 4. Ve al carrito de compras para revisar los productos agregados y proceder al pago.
 5. Completa el proceso de pago proporcionando la información necesaria.
-6. Recibirás una confirmación de tu pedido por correo electrónico.
+
