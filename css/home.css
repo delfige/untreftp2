@@ -482,27 +482,43 @@ ul, ol {
 
 .logo-f{
     margin-top: 3%;
-    height: 100px;
+    height: 80px;
     font-size: 50px;
 }
 footer img{
-    height: 60px;
+    height: 40px;
 }
 .div-f{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 3%;
-    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
     justify-content: space-around;
-    height: 22rem;
-    background-color: white;
+    height: 25rem;
+    align-items: center;
+    background-color: #3d5315;
+    color: white;
+}
+.div-f1{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 30px;
+
+}
+.div-f1 p a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 .div-f2{
-    width: 25%;
+    width: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 1%;
 }
 
 
@@ -510,7 +526,7 @@ footer img{
 @media (max-width: 1024px) {
     .hero-image {
         
-        height:55rem;
+        height:30rem;
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 2%;
@@ -522,9 +538,9 @@ footer img{
 
     }
     .white-div{
-        height: 35%;
+        height: 65%;
         width: 30%;
-        margin-left: 5%;
+        margin-left: 35%;
     }
     .p1,.p2{
         font-size: 3rem;
@@ -536,7 +552,9 @@ footer img{
 
 @media (max-width: 800px) {
     .white-div{
-        display: none;
+        height: 55%;
+        width: 40%;
+        margin-left: 35%;
     }
     .botones-prod{
         gap: 50px;
@@ -554,9 +572,8 @@ footer img{
         font-size: 17px;
         margin-right: 5px;
     }
-    .logo-f{
-        height: 80px;
-
+    .div-f1{
+        width: 70%;
     }
     .shopping span{
         font-size: 27px;
@@ -567,6 +584,12 @@ footer img{
     .list .item{
         max-width: 250px;
         padding: 10px;
+    }
+    .favs{
+        font-size: 2rem;
+    }
+    .img-heart{
+        height: 2rem;
     }
     .nav{
         font-size: 50%;
@@ -586,17 +609,68 @@ footer img{
     .active .card{
         left: calc(100% - 350px);
     }
-    .div-f {
-        display: flex;
-        flex-direction: column;
-        padding-top: 3%;
-        justify-content: space-around;
-        height: 40rem;
-        background-color: white;
-        align-items: flex-end;
-        align-content: center;
+    .div-f1{
+        width: 90%;
     }
-    .logo-f{
-        height: 60px;
+    .div-f2{
+        width: 60%;
+
+    }
+    .hero-image {
+        height: 25rem;
+    }
+    .white-div{
+        height: 65%;
+    }
+}
+
+@media (max-width: 400px){
+    .hero-image {
+        height: 15rem;
+    }
+    .favs{
+        font-size: 2rem;
+    }
+    .img-heart{
+        height: 2rem;
+    }
+    .prod {
+        height: 40%;
+        width: 40%;
+        padding: 10%;
+    }
+    .cont-blog{
+        font-size: 75%;
+    }
+    .img-blog{
+        width: 20%;
+    }
+    .bt-leer {
+        font-size: 12px;
+    }
+    .bt-leer1 {
+        font-size: 12px;
+    }
+    .list .item {
+        width: 130px;
+        padding: 10px;
+    }
+    .white-div{
+        height: 65%;
+    }
+    .p1,.p2{
+        font-size: 2rem;
+    }
+    .div-f1{
+        font-size: 20px;
+    }
+    .div-f2{
+        width: 100%;
+    }
+    .white-div{
+        height: 95%;
+    }
+    .header{
+        font-size: 140%;
     }
 }

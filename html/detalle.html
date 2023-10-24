@@ -49,7 +49,7 @@
             <a class="pagar" href="checkout.html">PAGAR</a>
         </div>
     </div>
-    <script src="frutas.js"></script>
+   
     <button id="go-back-button"><img src="../assets/atras.png" alt=""></button>
 
     <div id="product-details">
@@ -78,10 +78,8 @@
                 return decodeURIComponent(results[2].replace(/\+/g, " "));
             }
 
-            // Obtener el ID del producto de la URL
             var productId = getParameterByName("id");
 
-            // Cargar productos desde productos.json
             fetch('../productos.json')
                 .then(response => response.json())
                 .then(data => {
@@ -93,13 +91,9 @@
                         document.getElementById("product-name").textContent = product.name;
                         document.getElementById("product-price").textContent = "PRECIO $" + product.price.toFixed(2);
                         document.getElementById("product-desc").textContent = product.descripcion2;
-
-                        // Obtén el botón "Agregar al carrito" por su ID
                         var addToCartButton = document.getElementById("add-to-cart-button");
 
-                        // Escucha el evento de clic en el botón
                         addToCartButton.addEventListener("click", function () {
-                            // Llama a la función addToCart pasando el ID del producto
                             addToCart(product.id);
                         });
                     } else {
@@ -117,25 +111,30 @@
             });
         });
     </script>
-    Z
-    <script src="../js/frutas.js"></script>
-</body>
-<footer>
-    <div class="div-f">
-        <img class="logo-f"  src="../assets/logo.png" alt="">
-        <div class="div-f2">
-            <h2>Contactános:</h2>
-            <img src="../assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
-            <img src="../assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
-            <p><img src="../assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
-
-        </div>
-        <div>
+    
+    
+    <footer>
+        <div class="div-f">
+            <img class="logo-f"  src="../assets/logo.png" alt="">
+            <div class="div-f1">
+                <p class="p-f" > Home</p>
+                <p class="p-f" >About</p>
+                <p class="p-f" >Services</p>
+                <p class="p-f" >Blog</p>
+                <p class="p-f" ><a href="mailto:contacto@tudominio.com">Contacto</a></p>
+            </div>
             <h2>Encontrános en:</h2>
-            <img src="../assets/fter/instagram (2).png" alt="">
-            <img src="../assets/fter/facebook.png" alt="">
+            <div class="div-f2">
+                <a href="mailto:contacto@tudominio.com"><img src="../assets/fter/email.png" alt=""></a>
+                <a href="https://wa.me/231444444" target="_blank"><img src="../assets/fter/whatsapp.png" alt=""></a>
+                <a href="tel:+123456789"><img src="../assets/fter/llamada.png" alt=""></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/fter/instagram.png" alt=""></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/fter/facebook.png" alt=""></a>
+            </div>
+            
         </div>
-    </div>
-</footer>
+    </footer>
+</body>
+<script src="../js/productos.js"></script>
 
 </html>

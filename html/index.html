@@ -53,7 +53,7 @@
         <div class="botones-prod">
             
                 <div class="cont1">
-                    <button id="miboton" class="bt-prod" onclick="window.location.href = '/components/verduras.html'">
+                    <button id="miboton" class="bt-prod">
                         <div class="div-prod">
                             <img class="prod" src="../assets/pimiento-morron.png" alt="">
                             <a href="verduras.html"></a>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="cont2">
 
-                    <button  id="miboton1" class="bt-prod" onclick="window.location.href = '/components/frutas.html'">
+                    <button  id="miboton1" class="bt-prod" >
                         <div class="div-prod">
                             <img class="prod" src="../assets/platano.png" alt="platano">
                         </div>
@@ -71,11 +71,12 @@
                     <div id="textoEmergente1" class="oculto">Frutas</div>
                 </div>
                 <div>
-                    <button   id="miboton2" class="bt-prod" onclick="window.location.href = '/components/ensaladas.html'">
+                    <button id="miboton2" class="bt-prod">
                         <div class="div-prod">
                             <img class="prod" src="../assets/ensalada.png" alt="">
-    
+                            
                         </div>
+
                     </button>
                     <div id="textoEmergente2" class="oculto">Ensaladas</div>
                 </div>
@@ -100,7 +101,7 @@
     
                     </p>
                     
-                    <button onclick="window.location.href = 'blog.html'" class="bt-leer">  LEER MAS></button>
+                    <a href="blog.html"><button  class="bt-leer">LEER MAS></button></a>
                     </div>
             </div>
             <div class="cont-blog1">
@@ -111,36 +112,39 @@
                         
                     </p>
                     
-                    <button onclick="window.location.href = '/components/blog.html'"  class="bt-leer1">LEER MAS></button>
+                    <a href="blog.html"><button  class="bt-leer1">LEER MAS></button></a>
                 </div>
                 <img class="img-blog" src="../assets/verduras.png" alt="frutillas">
          </div>
 
         </div>
     </section>
-    <script src="../js/frutas.js"></script>
+    <script src="../js/productos.js"></script>
     <script src="../js/carro.js"></script>
     
         
     <footer>
         <div class="div-f">
             <img class="logo-f"  src="../assets/logo.png" alt="">
+            <div class="div-f1">
+                <p class="p-f" > Home</p>
+                <p class="p-f" >About</p>
+                <p class="p-f" >Services</p>
+                <p class="p-f" >Blog</p>
+                <p class="p-f" ><a href="mailto:contacto@tudominio.com">Contacto</a></p>
+            </div>
+            <h2>Encontrános en:</h2>
             <div class="div-f2">
-                <h2>Contactános:</h2>
-                <img src="../assets/fter/correo.png" alt=""><a href="mailto:contacto@tudominio.com">Lovegreen@gmail.com</a>
-                <img src="../assets/fter/wsp.png" alt=""><a href="https://wa.me/231444444">Contacto por WhatsApp</a>
-                <p><img src="../assets/fter/cel.png" alt=""> Teléfono: +1234567890</p>
-    
+                <a href="mailto:contacto@tudominio.com"><img src="../assets/fter/email.png" alt=""></a>
+                <a href="https://wa.me/231444444" target="_blank"><img src="../assets/fter/whatsapp.png" alt=""></a>
+                <a href="tel:+123456789"><img src="../assets/fter/llamada.png" alt=""></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/fter/instagram.png" alt=""></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/fter/facebook.png" alt=""></a>
             </div>
-            <div>
-                <h2>Encontrános en:</h2>
-                <img src="../assets/fter/instagram (2).png" alt="">
-                <img src="../assets/fter/facebook.png" alt="">
-            </div>
+            
         </div>
     </footer>
 </body>
-
 </html>
 
 

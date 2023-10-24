@@ -14,36 +14,38 @@ const updateCartQuantity = () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const listado = document.getElementById("listado");
-    const addToCartButton = document.getElementById("add-to-cart-button");
+    const agregar = document.getElementById("add-to-cart-button");
 
-    // Recupera los productos del almacenamiento local
-    const savedCart = localStorage.getItem('cart');
-    listCards = savedCart ? JSON.parse(savedCart) : [];
+    const carrito = localStorage.getItem('cart');
+    listCards = carrito ? JSON.parse(carrito) : [];
     
-    // Recupera la cantidad del carrito desde LocalStorage y muestra en todas las páginas
-    const savedCartQuantity = localStorage.getItem('cartQuantity');
-    if (savedCartQuantity) {
-        quantity.innerText = savedCartQuantity;
+    const carritoQuantity = localStorage.getItem('cartQuantity');
+    if (carritoQuantity) {
+        quantity.innerText = carritoQuantity;
     }
 
-    // Mostrar los productos en la página
     listado.innerHTML = "";
     let total = 0;
-
+    const eliminarTodo = document.createElement("button");
+    eliminarTodo.textContent = "Eliminar Todos";
+    eliminarTodo.classList.add("removeAllButton");
+    eliminarTodo.addEventListener("click", Eliminartodos);
+    listado.appendChild(eliminarTodo);
     listCards.forEach((product, key) => {
         if (product != null) {
             total += product.price;
             const itemDiv = document.createElement("div");
             itemDiv.classList.add("item");
+            
             itemDiv.innerHTML = `
                 <div><img src="../assets/frutas/${product.imagen}"></div>
                 <div class="cardTitle">${product.name}</div>
                 <div class="cardPrice">$${product.price.toFixed(2)}</div>
                 <div>
-                    <button style="background-color: #b3db6b; padding: 10px;" class="cardButton" onclick="changeQuantity(${key}, ${product.quantity - 1})">-</button>
+                    <button style="background-color: #b3db6b; padding: 10px;" class="cardButton" onclick="cambiarCantidad(${key}, ${product.quantity - 1})">-</button>
                     <span style="color: black; margin: 10px;">${product.quantity}</span>
-                    <button style="background-color: #b3db6b; padding: 10px;" class="cardButton" onclick="changeQuantity(${key}, ${product.quantity + 1})">+</button>
-                    <button style="background-color: #ff6b6b; padding: 10px; margin-left: 5px;" class="cardButton" onclick="removeProduct(${key})">x</button>
+                    <button style="background-color: #b3db6b; padding: 10px;" class="cardButton" onclick="cambiarCantidad(${key}, ${product.quantity + 1})">+</button>
+                    <button style="background-color: #ff6b6b; padding: 10px; margin-left: 10px;" class="cardButton" onclick="EliminarProducto(${key})">x</button>
                 </div>
             `;
             listado.appendChild(itemDiv);
@@ -56,41 +58,24 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="cardTotalPrice">$${total.toFixed(2)}</p>
     `;
     listado.appendChild(totalDiv);
-
-    // Botón para eliminar todos los elementos del carrito
-    const removeAllButton = document.createElement("button");
-    removeAllButton.textContent = "Eliminar Todos";
-    removeAllButton.classList.add("removeAllButton");
-    removeAllButton.addEventListener("click", removeAllProducts);
-    listado.appendChild(removeAllButton);
-
-    // Actualizar la cantidad de productos en el carrito
     updateCartQuantity();
 
-    // Obtén el ID del producto de la URL
     const productId = getParameterByName("id");
 
-    // Obtén el botón "Agregar al carrito" por su ID
-    
-
-    // Escucha el evento de clic en el botón
-    addToCartButton.addEventListener("click", function () {
-        // Llama a la función addToCart pasando el ID del producto
+    agregar.addEventListener("click", function () {
         addToCart(productId);
     });
 });
 
 const initApp = () => {
-    // Cargar datos del carrito desde LocalStorage
 
-    const savedCart = localStorage.getItem('cart');
-    listCards = savedCart ? JSON.parse(savedCart) : [];
+    const carrito = localStorage.getItem('cart');
+    listCards = carrito ? JSON.parse(carrito) : [];
 
-    const path = window.location.pathname; // Obtenemos la ruta de la URL
+    const path = window.location.pathname;
     const pathSegments = path.split("/");
     const currentPage = pathSegments[pathSegments.length - 1];
 
-    // Mapeamos el nombre del archivo actual a la categoría correspondiente
     const categorias = {
         "frutas.html": "frutas",
         "verduras.html": "verduras",
@@ -101,7 +86,6 @@ const initApp = () => {
 
     selectedCategoria = categorias[currentPage] || "frutas"; 
 
-    // Cargar productos desde JSON
     fetch('../productos.json')
         .then((response) => response.json())
         .then((data) => {
@@ -134,7 +118,7 @@ const renderProductList = () => {
             <div class="title">${value.name}</div>
             <div class="descripcion">${value.descripcion}</div>
             <div class="price">$${value.price.toFixed(2)}</div>
-            <button onclick="addToCart(${value.id})">Add to Cart</button>
+            <button onclick="addToCart(${value.id})">Agregar al carrito</button>
             <a href="detalle.html?id=${value.id}" class="details-link" data-product-id="${value.id}">Ver detalles</a>
         `;
 
@@ -143,16 +127,11 @@ const renderProductList = () => {
 };
 
 
-
-
-
-
-
 const addToCart = (productId) => {
     const product = products.find((p) => p.id === productId);
 
     if (!product) {
-        console.error(`Product with id ${productId} not found.`);
+        console.error(`Producto ${productId} no encontrado.`);
         return;
     }
 
@@ -166,19 +145,12 @@ const addToCart = (productId) => {
     }
 
     localStorage.setItem('cart', JSON.stringify(listCards));
-
-    // Actualiza la cantidad en el carrito
     updateCartQuantity();
 };
 
 
 
-
-
-
-
-
-const changeQuantity = (key, newQuantity) => {
+const cambiarCantidad = (key, newQuantity) => {
     if (newQuantity < 1) {
         return;
     }
@@ -188,7 +160,6 @@ const changeQuantity = (key, newQuantity) => {
     localStorage.setItem('cart', JSON.stringify(listCards));
     updateCart();
 
-    // Actualizar el total a pagar después de cambiar la cantidad
     const total = listCards.reduce((total, product) => total + product.price, 0);
     const totalDiv = document.querySelector(".cardTotalPrice");
     totalDiv.textContent = `$${total.toFixed(2)}`;
@@ -196,18 +167,13 @@ const changeQuantity = (key, newQuantity) => {
 
 
 
-
-
-
-
-
-const removeProduct = (key) => {
+const EliminarProducto = (key) => {
     listCards.splice(key, 1);
     localStorage.setItem('cart', JSON.stringify(listCards));
     updateCart();
 };
 
-const removeAllProducts = () => {
+const Eliminartodos = () => {
     listCards = [];
     localStorage.removeItem('cart');
     updateCart();
@@ -218,12 +184,8 @@ const updateCart = () => {
 };
 
 
-// Agrega el atributo onclick a cada elemento li
 categoriaItems.forEach(item => {
-    // Obtiene la categoría del elemento data
     const categoria = item.getAttribute('data-categoria');
-
-    // Agrega el atributo onclick que redirige a la página correspondiente
     item.onclick = function() {
         window.location.href = `${categoria}.html`;
     };
